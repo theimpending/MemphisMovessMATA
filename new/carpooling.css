@@ -1,0 +1,260 @@
+/* Reset and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and general layout */
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 80%; /* Adjusted width to allow space for content */
+    min-height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 220px; /* Increased width for better readability */
+    background-color: #2b7cff;
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    color: white;
+}
+
+.tab-button {
+    background-color: #3a8bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #1b5ecc;
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+/* Driver section */
+.drivers-section {
+    margin-top: 20px;
+}
+
+.driver-card {
+    background-color: #f0f8ff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.driver-card h4 {
+    color: #2b7cff;
+}
+
+.driver-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.highlighted {
+    background-color: #d0e8ff;
+    border-left: 5px solid #1b5ecc;
+}
+
+/* Title and paragraph styling */
+h2 {
+    color: #2b7cff;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h5 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar and dropdown styling */
+.navbar {
+    width: 100%;
+    background-color: #2b7cff; /* Matches sidebar color */
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown {
+    margin-right: auto; /* Align dropdown to the left */
+}
+
+.dropbtn {
+    background-color: #3a8bff;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #1b5ecc;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0f8ff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #2b7cff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #d0e8ff;
+    font-size: 1rem;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #d0e8ff;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Circle actions buttons */
+.circle-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.circle-button {
+    background-color: #2b7cff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+    background-color: #1b5ecc;
+}
+
+/* Header of driver section */
+.drivers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.match-button {
+    background-color: #2b7cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.match-button:hover {
+    background-color: #1b5ecc;
+}
+
+.driver-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Add space between info and other content */
+}
+
+.driver-info h4 {
+    color: #2b7cff;
+    margin: 0; /* Remove default margin for better alignment */
+    font-size: 1.2rem; /* Adjust size for better readability */
+}
+
+/* Availability Status */
+.availability {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.available {
+    color: #27ae60; /* Green for available */
+    background-color: #eafaf1; /* Light green background */
+}
+
+.unavailable {
+    color: #e74c3c; /* Red for unavailable */
+    background-color: #fbe9e7; /* Light red background */
+}
+
+.government-verified {
+    background-color: #4caf50; /* Green color to signify verified */
+    color: white;
+
+}
+
+.unavailable {
+    background-color: #f44336; /* Red color for unavailable */
+    color: white;
+}
